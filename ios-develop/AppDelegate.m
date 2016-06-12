@@ -21,12 +21,9 @@
     CGRect rt = [window frame];
     NSLog(@"%f %f %f %f", rt.origin.x, rt.origin.y, rt.size.width, rt.size.height);
     
-    [window setFrame:CGRectMake(0, 0, 640, 1136)];
-    rt = [window frame];
-    NSLog(@"%f %f %f %f", rt.origin.x, rt.origin.y, rt.size.width, rt.size.height);
-    
-    CGRect r = [ UIScreen mainScreen ].applicationFrame;
+    CGRect r = [UIScreen mainScreen].applicationFrame;
     NSLog(@"screen %f, %f, %f, %f",r.origin.x,r.origin.y,r.size.width,r.size.height);
+    
     return YES;
 }
 

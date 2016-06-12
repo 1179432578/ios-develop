@@ -18,17 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
-    CGRect rt = self.view.frame;
-     NSLog(@"%f %f %f %f", rt.origin.x, rt.origin.y, rt.size.width, rt.size.height);
-    [self.view setFrame:CGRectMake(0, 0, 640, 1136)];
-    rt = self.view.frame;
-    NSLog(@"%f %f %f %f", rt.origin.x, rt.origin.y, rt.size.width, rt.size.height);
-    [self.view autoresizesSubviews];
-    
-    [password_text setFrame:CGRectMake(330, 330, 200, 100)];
-    
-    password_text.delegate = self;
+    passwordTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,19 +26,55 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction) pressPwdTxt{
-    [password_text becomeFirstResponder];
+- (IBAction) touchDownPwdTxtField{
+    [passwordTextField becomeFirstResponder];
     NSLog(@"11112");
 }
 
-- (IBAction)finshiEditing{
-    [password_text resignFirstResponder];
-    NSLog(@"33333333311112");
+//按键盘return完成密码输入
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [passwordTextField resignFirstResponder];
+    return NO;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [password_text resignFirstResponder];
-    return NO;
+#pragma mark - 视图控制器的触摸事件
+//UIViewController派生于UIResponder，实现触摸方法可以响应触摸
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"UIViewController start touch...");
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    //取得一个触摸对象（对于多点触摸可能有多个对象）
+    UITouch *touch=[touches anyObject];
+    //NSLog(@"%@",touch);
+    
+    //取得当前位置
+    CGPoint current=[touch locationInView:self.view];
+    //取得前一个位置
+    CGPoint previous=[touch previousLocationInView:self.view];
+    
+    NSLog(@"UIViewController moving...");
+    
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"UIViewController touch end.");
+}
+
+
+- (IBAction)changeView{
+    UIStoryboard *storyBoard;
+    UIViewController *vc;
+    //获得UITabBarController
+    storyBoard  = [UIStoryboard storyboardWithName:@"view1" bundle:nil];
+    
+    vc = [storyBoard instantiateInitialViewController];
+    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    
+    [window addSubview:vc.view];
+    [window bringSubviewToFront:vc.view];
+    
+//    [vc becomeFirstResponder];
 }
 
 @end

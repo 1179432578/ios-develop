@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController{
-    IBOutlet UITextField *password_text;
+    IBOutlet UITextField *passwordTextField;
 }
 
 //@property UITextField *password_text;
-- (IBAction) pressPwdTxt;
 
-- (IBAction)finshiEditing;
+//触摸密码框出现键盘
+- (IBAction) touchDownPwdTxtField;
+
+- (IBAction) changeView;
+
 
 @end
 
