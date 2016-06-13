@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController{
     IBOutlet UITextField *passwordTextField;
+    UIViewController *vc;
 }
 
 //@property UITextField *password_text;

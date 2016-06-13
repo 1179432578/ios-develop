@@ -36,14 +36,14 @@
 */
 
 - (IBAction)returnHomeView{
-//    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
 //    UIStoryboard *storyBoard;
 //    UIViewController *vc;
 //    //获得UITabBarController
 //    storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //    vc = [storyBoard instantiateInitialViewController];
 //    [window addSubview:vc.view];
-//    [window bringSubviewToFront:vc.view];
+    [window sendSubviewToBack:self.view];
     NSLog(@"11111111ffffeerter");
 }
 

@@ -64,17 +64,13 @@
 
 - (IBAction)changeView{
     UIStoryboard *storyBoard;
-    UIViewController *vc;
     //获得UITabBarController
     storyBoard  = [UIStoryboard storyboardWithName:@"view1" bundle:nil];
-    
     vc = [storyBoard instantiateInitialViewController];
-    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
     
+    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
     [window addSubview:vc.view];
     [window bringSubviewToFront:vc.view];
-    
-//    [vc becomeFirstResponder];
 }
 
 @end
