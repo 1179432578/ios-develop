@@ -1,23 +1,30 @@
 //
-//  View1Controller.m
+//  MyTabBarViewController.m
 //  ios-develop
 //
-//  Created by lewis on 16/6/13.
+//  Created by lewis on 16/6/16.
 //  Copyright © 2016年 鲁飞. All rights reserved.
 //
 
-#import "View1Controller.h"
+#import "MyTabBarViewController.h"
 
-@interface View1Controller ()
+@interface MyTabBarViewController ()
 
 @end
 
-@implementation View1Controller
+@implementation MyTabBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-     NSLog(@"11111eerter");
+    UIImage *img1 = [UIImage imageNamed:@"bitbug_favicon.png"];
+    img1 = [img1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [[self.tabBar items] objectAtIndex:1].image = img1;
+    [[self.tabBar items] objectAtIndex:0].image = img1;
+//
+    [[[self.tabBar items] objectAtIndex:1] initWithTitle:@"" image:img1 selectedImage:img1];
+
+    NSLog(@"324");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,18 +41,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)returnHomeView{
-    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
-    UIStoryboard *storyBoard;
-    UIView *vc;
-    //获得UITabBarController
-//    storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    vc = [storyBoard instantiateInitialViewController];
-//    [window addSubview:vc.view];
-    vc = [[window subviews] objectAtIndex:0];
-    [window bringSubviewToFront:vc];
-    NSLog(@"11111111ffffeerter");
-}
 
 @end

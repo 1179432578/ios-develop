@@ -64,17 +64,29 @@
 
 - (IBAction)changeView{
     UIStoryboard *storyBoard;
-    UIViewController *vc;
-    //获得UITabBarController
     storyBoard  = [UIStoryboard storyboardWithName:@"view1" bundle:nil];
     
-    vc = [storyBoard instantiateInitialViewController];
+    m_viewController = [storyBoard instantiateInitialViewController];
     UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
     
-    [window addSubview:vc.view];
-    [window bringSubviewToFront:vc.view];
+    [window addSubview:m_viewController.view];
+    [window bringSubviewToFront:m_viewController.view];
     
 //    [vc becomeFirstResponder];
+}
+
+- (IBAction) testTabBarController{
+    //创建故事版
+    UIStoryboard * storyBoard  = [UIStoryboard storyboardWithName:@"tabbarview" bundle:nil];
+    //实例化控制器
+    m_tabController = [storyBoard instantiateViewControllerWithIdentifier:@"tabbar"];
+    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    
+    //把tabbarcontroller的视图移到窗口最前面
+    [window addSubview:m_tabController.view];
+    [window bringSubviewToFront:m_tabController.view];
+    
+    NSLog(@"12134");
 }
 
 @end
