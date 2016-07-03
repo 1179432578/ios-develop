@@ -13,5 +13,17 @@
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
+        <viewController id="5bC-mY-V5W">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="Bgm-Gl-MrR"/>
+                <viewControllerLayoutGuide type="bottom" id="D5Q-BO-qwg"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="5ff-XP-pTG">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <animations/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            </view>
+        </viewController>
     </objects>
 </document>

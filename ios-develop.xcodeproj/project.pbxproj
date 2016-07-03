@@ -13,6 +13,7 @@
 		29C77EE91D0D48E900D3E7A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C77EE71D0D48E900D3E7A5 /* Main.storyboard */; };
 		29C77EEB1D0D48E900D3E7A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C77EEA1D0D48E900D3E7A5 /* Assets.xcassets */; };
 		29C77EEE1D0D48E900D3E7A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C77EEC1D0D48E900D3E7A5 /* LaunchScreen.storyboard */; };
+		F64BA4CB1D29467D008CFD8C /* file in Resources */ = {isa = PBXBuildFile; fileRef = F64BA4CA1D29467D008CFD8C /* file */; };
 		F65CB7901D12E59400B3B3BF /* tabbarview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65CB78F1D12E59400B3B3BF /* tabbarview.storyboard */; };
 		F65CB7931D12E5EF00B3B3BF /* MyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F65CB7921D12E5EF00B3B3BF /* MyTabBarViewController.m */; };
 		F65CB7971D12E95E00B3B3BF /* 天气.png in Resources */ = {isa = PBXBuildFile; fileRef = F65CB7961D12E95E00B3B3BF /* 天气.png */; };
@@ -33,6 +34,7 @@
 		29C77EEA1D0D48E900D3E7A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29C77EED1D0D48E900D3E7A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29C77EEF1D0D48E900D3E7A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F64BA4CA1D29467D008CFD8C /* file */ = {isa = PBXFileReference; lastKnownFileType = folder; path = file; sourceTree = "<group>"; };
 		F65CB78F1D12E59400B3B3BF /* tabbarview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = tabbarview.storyboard; sourceTree = "<group>"; };
 		F65CB7911D12E5EF00B3B3BF /* MyTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarViewController.h; sourceTree = "<group>"; };
 		F65CB7921D12E5EF00B3B3BF /* MyTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarViewController.m; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 			children = (
 				29C77EDD1D0D48E900D3E7A5 /* ios-develop */,
 				29C77EDC1D0D48E900D3E7A5 /* Products */,
-				F65CB7951D12E95E00B3B3BF /* images */,
+				F64BA4C61D294549008CFD8C /* resource */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +101,15 @@
 				29C77EDF1D0D48E900D3E7A5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F64BA4C61D294549008CFD8C /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				F64BA4CA1D29467D008CFD8C /* file */,
+				F65CB7951D12E95E00B3B3BF /* images */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 		F65CB78B1D12E51900B3B3BF /* classes */ = {
@@ -202,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64BA4CB1D29467D008CFD8C /* file in Resources */,
 				29C77EEE1D0D48E900D3E7A5 /* LaunchScreen.storyboard in Resources */,
 				F65CB7901D12E59400B3B3BF /* tabbarview.storyboard in Resources */,
 				F66B9BC71D0DBE75001A61E1 /* View.xib in Resources */,

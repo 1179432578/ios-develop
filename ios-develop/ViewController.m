@@ -34,6 +34,85 @@
 //按键盘return完成密码输入
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [passwordTextField resignFirstResponder];
+    
+    //use bundle
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"user" ofType:@"plist" inDirectory: @"file"];
+    NSLog(@"bundlePath_1:%@", bundlePath);
+//    NSLog(@"bundlePath:%@", [NSBundle mainBundle].bundlePath);
+//    NSLog(@"resourcePath:%@", [NSBundle mainBundle].resourcePath);
+//    NSLog(@"executablePath:%@", [NSBundle mainBundle].executablePath);
+    
+//    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:bundlePath];
+//    NSString *pwd = [dict objectForKey:@"password"];
+//    NSLog(@"password:%@", pwd);
+    
+    
+    //use document to get writeable path
+//    NSLog(@"1 %@", NSUserName());
+//    NSLog(@"2 %@",NSFullUserName());
+//    NSLog(@"3 %@",NSHomeDirectory());//exist
+//    NSLog(@"4 %@",NSTemporaryDirectory());//exist
+//    NSLog(@"5 %@",NSOpenStepRootDirectory());
+    
+//    NSLog(@"NSApplicationDirectory %@",NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSDemoApplicationDirectory %@",NSSearchPathForDirectoriesInDomains(NSDemoApplicationDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSDeveloperApplicationDirectory %@",NSSearchPathForDirectoriesInDomains(NSDeveloperApplicationDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSAdminApplicationDirectory %@",NSSearchPathForDirectoriesInDomains(NSAdminApplicationDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSLibraryDirectory %@",NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSDeveloperDirectory %@",NSSearchPathForDirectoriesInDomains(NSDeveloperDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSUserDirectory %@",NSSearchPathForDirectoriesInDomains(NSUserDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSDocumentationDirectory %@",NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSDocumentDirectory %@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSCoreServiceDirectory %@",NSSearchPathForDirectoriesInDomains(NSCoreServiceDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSApplicationSupportDirectory %@",NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, false));
+//     NSLog(@"NSCachesDirectory %@",NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, false));
+//    NSLog(@"NSMoviesDirectory %@",NSSearchPathForDirectoriesInDomains(NSMoviesDirectory, NSUserDomainMask, false));
+//
+//    NSLog(@"NSPicturesDirectory %@",NSSearchPathForDirectoriesInDomains(NSPicturesDirectory, NSUserDomainMask, false));
+
+    //get Documents Library(Caches Preferences) tmp
+//    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true) objectAtIndex:0];
+//    NSLog(@"documentsPath :%@", documentsPath);
+//    
+//    NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, true) objectAtIndex:0];
+//    NSLog(@"libraryPath :%@", libraryPath);
+//    
+//    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, true) objectAtIndex:0];
+//    NSLog(@"cachesPath :%@", cachesPath);
+//    
+//    NSString *preferencesPath = [NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, true) objectAtIndex:0];
+//    NSLog(@"preferencesPath :%@", preferencesPath);
+    
+    //create dict and write to disk
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//    [dict setObject:@"123456" forKey:@"password"];
+//    NSString *tmpPath = NSTemporaryDirectory();
+//    NSLog(@"preferencesPath :%@", tmpPath);
+//    tmpPath = [tmpPath stringByAppendingString:@"data.plist"];
+//    NSLog(@"write Path :%@", tmpPath);
+//    [dict writeToFile:tmpPath atomically:false];
+    
+    //遍历打印文件夹下所有文件s
+//    NSString *rootPath = NSHomeDirectory();
+//    NSLog(@"rootPath: %@", rootPath);
+//    NSDirectoryEnumerator *files = [[NSFileManager defaultManager]enumeratorAtPath:rootPath];
+//    for (NSString * file in files) {
+//        NSLog(@"path: %@", file);
+//    }
+    
+    
+    //给文件夹添加属性
+    //设置目录不备份
+//    NSURL *url = [[NSURL alloc] initFileURLWithPath:rootPath];
+//    NSError *error;
+//    BOOL success = [url setResourceValue: [NSNumber numberWithBool: YES]
+//                                  forKey: NSURLIsExcludedFromBackupKey error: &error];
+//    if(!success){
+//        NSLog(@"Error excluding %@ from backup %@", [url lastPathComponent], error);
+//    }
+    
+    
+    
     return NO;
 }
 
@@ -85,6 +164,10 @@
     //把tabbarcontroller的视图移到窗口最前面
     [window addSubview:m_tabController.view];
     [window bringSubviewToFront:m_tabController.view];
+    
+//    UITabBarController *tabbar = [[UITabBarController alloc] init];
+//    [window addSubview:tabbar.view];
+//    [window bringSubviewToFront:tabbar.view];
     
     NSLog(@"12134");
 }

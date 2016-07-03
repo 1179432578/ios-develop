@@ -88,14 +88,6 @@
                                     <rect key="frame" x="118" y="67" width="85" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gge-kf-kPp">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="test"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="86" y="225" width="30" height="30"/>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAf-xJ-xpF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -119,7 +111,6 @@
                                 <exclude reference="Ry5-4o-Pd4"/>
                                 <exclude reference="QcH-MW-sKI"/>
                                 <exclude reference="mht-cN-Eyd"/>
-                                <exclude reference="gge-kf-kPp"/>
                                 <exclude reference="qAf-xJ-xpF"/>
                             </mask>
                         </variation>
@@ -132,7 +123,6 @@
                                 <include reference="Ry5-4o-Pd4"/>
                                 <include reference="QcH-MW-sKI"/>
                                 <include reference="mht-cN-Eyd"/>
-                                <include reference="gge-kf-kPp"/>
                                 <include reference="qAf-xJ-xpF"/>
                             </mask>
                         </variation>
